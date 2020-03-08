@@ -6,6 +6,11 @@ import './style.scss';
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query MenuQuery {
+			site {
+				siteMetadata {
+					author
+				}
+			}
 			allContentfulPage(
 					sort: {fields: menuItemOrder, order: ASC}, 
 					filter: {menuItemOrder: {gt: 0}}
@@ -64,13 +69,17 @@ const Navbar = () => {
 	})
 
 	return (
-		<nav className="navbar is-light is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+		<nav className="navbar is-light is-fixed-top is-spaced container" role="navigation" aria-label="main navigation">
 			<div className="navbar-brand">
 				<a role="button" className="navbar-burger burger is-marginless" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 				</a>
+
+				<div className="navbar-item is-size-4 is-hidden-desktop">	
+					{data.site.siteMetadata.author}
+				</div>
 			</div>
 
 			<div id="navbarMenu" className="navbar-menu">
@@ -106,6 +115,9 @@ const Navbar = () => {
 					)}
 				</div>
 				<div className="navbar-end">
+					<a className="navbar-item is-size-4" href="/">
+						{data.site.siteMetadata.author}
+					</a>
 				</div>
 			</div>
 		</nav>
