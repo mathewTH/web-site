@@ -14,7 +14,7 @@ const Footer = () => (
 			}
 		`}
 		render={data => (
-			<footer className="footer center has-background-light is-hidden-mobile">
+			<footer className="footer center has-background-light">
 				<div className="content has-text-centered is-size-7">
 					Copyright 2020, {data.site.siteMetadata.author}
 				</div>

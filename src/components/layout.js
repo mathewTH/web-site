@@ -2,22 +2,22 @@ import React from 'react';
 
 import './style.scss';
 import Helmet from './helmet';
-import Header from './header';
+import Navbar from './navbar';
 import Footer from './footer';
 
 const Layout = ({ children }) => (
-	<>
+	<div className="container">
 		<Helmet />
-		<Header />
+		<header>
+			<Navbar />
+		</header>
 		<body className="has-navbar-fixed-top">
 			<section className="section">
-				<div className="container">
-					{children}
-				</div>
+				{children}
 			</section>
 		</body>
 		<Footer />
-	</>
+	</div>
 );
 
 export default Layout;
