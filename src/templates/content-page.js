@@ -12,7 +12,7 @@ const Page = ({ data }) => {
 
   return (
     <Layout>
-      <article className="content">
+      <article className="content has-background-white">
         <RichTextDisplay json={json} />
       </article>
       {data.page.displayListOfPlannedTrips && 
