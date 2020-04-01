@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
 
+import NavBurger from './navBurger';
 import './style.scss';
 
 const Navbar = () => {
-	const [isBurgerActive, setIsBurgerActive ] = useState(false);
 
   const data = useStaticQuery(graphql`
     query MenuQuery {
@@ -45,15 +45,7 @@ const Navbar = () => {
 	return (
 		<nav className="navbar is-light is-fixed-top is-spaced container" role="navigation" aria-label="main navigation">
 			<div className="navbar-brand">
-				<a role="button" className="navbar-burger burger is-marginless" aria-label="menu" aria-expanded="false"
-				onClick={() => {
-					setIsBurgerActive(!isBurgerActive);
-					document.getElementById("navbarMenu").classList.toggle('is-active');
-				}}>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</a>
+				<NavBurger />
 
 				<div className="navbar-item is-size-4 is-hidden-desktop">	
 					{data.site.siteMetadata.author}
