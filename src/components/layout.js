@@ -13,11 +13,9 @@ const Layout = ({ children }) => (
 			<header>
 				<Navbar />
 			</header>
-			<body className="has-navbar-fixed-top">
-				<section className="">
-					{children}
-				</section>
-			</body>
+			<section className="">
+				{children}
+			</section>
 			<Footer />
 		</div>
 	</BackgroundSection>

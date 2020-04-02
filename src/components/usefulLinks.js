@@ -26,13 +26,13 @@ const UsefulLinks = () => {
 	return (
     <>
       {data.allContentfulLinkCategory.edges.map(({ node }) => 
-        <section className="content has-background-white">
+        <section key={node.name} className="content has-background-white">
           <h3>{node.name}</h3>
-          {node.links.map(({ url, name, description }) => 
-            <>
+          {node.links.map(({ url, name, description }) =>
+            <div key={url}>
               <a href={url}>{name}</a>
               <p>{description ? description.description : ''}</p>
-            </>
+            </div>
           )}
         </section>
       )}
