@@ -23,7 +23,7 @@ export default () => (
 					name="viewport"
 					content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
 				/>
-				<body className="has-navbar-fixed-top" />
+				<body className="has-navbar-fixed-top is-full-height" />
 				<meta name="description" content={data.site.siteMetadata.description} />
 				<meta name="keywords" content={data.site.siteMetadata.keywords} />
 				<title>{data.site.siteMetadata.title}</title>
