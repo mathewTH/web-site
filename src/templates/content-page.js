@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from "gatsby"
 
-import Layout from '../components/layout';
 import PlannedTrips from '../components/plannedTrips';
 import ExecutiveList from '../components/executiveList';
 import UsefulLinks from '../components/usefulLinks';
@@ -9,10 +8,11 @@ import RichTextDisplay from '../components/richTextDisplay';
 
 const Page = ({ data }) => {
   const json = data.page.content.json
+  console.log(json)
 
   return (
-    <Layout>
-      <article className="content has-background-white">
+    <>
+      <article className="content">
         <RichTextDisplay json={json} />
       </article>
       {data.page.displayListOfPlannedTrips && 
@@ -24,7 +24,7 @@ const Page = ({ data }) => {
       {data.page.displayListOfLinks && 
         <UsefulLinks/>
       }
-    </Layout>
+    </>
   )
 }
 
