@@ -14,7 +14,30 @@ $site-background-color: hsla($site-background-hue, $site-background-saturation, 
 
 $body-font-size: 0.9em;
 
+$dimensions: 512;
+
 @import '~bulma/bulma.sass';
+
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  position: relative; /* Needed if loop: true */
+  flex: 0 0 100%; /* Choose any slide width */
+}
+
+.carousel-image {
+	float: left;
+	height: 500px;
+	width: 500px;
+	margin-right: 1rem;
+}
 
 .is-full-height {
 	height: 100vh;
@@ -52,6 +75,7 @@ $body-font-size: 0.9em;
 }
 
 .footer {
+	clear: both;
 	display: flex;
 	padding: 1.5rem 1.5rem;
 	line-height: 1.5rem;

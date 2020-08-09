@@ -26,7 +26,7 @@ module.exports = {
 			options: {
 				spaceId: process.env.CONTENTFUL_SPACEID,
 				accessToken: process.env.CONTENTFUL_ACCESSTOKEN,
-				forceFullSync: true,
+				forceFullSync: false,
 			},
 		},
 		'gatsby-image',

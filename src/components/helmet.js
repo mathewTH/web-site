@@ -28,7 +28,7 @@ export default () => (
 				<title>{data.site.siteMetadata.title}</title>
 				<html lang="en" />
 				{/* Google / Search Engine Meta Tags */}
-				<meta itemprop="name" content={data.site.siteMetadata.author} /> />
+				<meta itemprop="name" content={data.site.siteMetadata.author} />
 				<meta
 					itemprop="description"
 					content={data.site.siteMetadata.description}

@@ -16,7 +16,7 @@ const Page = ({ data }) => {
         <RichTextDisplay json={json} />
       </article>
       {data.page.displayListOfPlannedTrips && 
-        <PlannedTrips/>
+        <PlannedTrips className="is-clearfix" />
       }
       {data.page.displayExecutiveList && 
         <ExecutiveList/>
